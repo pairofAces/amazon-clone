@@ -2,8 +2,8 @@
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './components/Header/Navbar';
-// import Home from './components/Home/Home';
-// import Checkout from './components/Checkout/Checkout';
+import Home from './components/Home/Home';
+import Checkout from './components/Checkout/Checkout';
 
 
 function App() {
