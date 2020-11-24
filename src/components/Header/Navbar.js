@@ -2,14 +2,14 @@ import React from 'react';
 import "./Header.css";
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
-import img from 'src/components/Header/Emporium.png';
+import img from '/Users/karanchauhan/Development/Personal Projects/Amazon-Clone/emporium/src/components/Header/Emporium.png';
 import { Link } from 'react-router-dom';
 
 export default function Navbar(){
     return(
         <div className='header'>
             <Link to='/'>
-                <img src={img} className='header_logo'/>
+                <img src={img} className='header_logo' alt=""/>
             </Link>
 
             <div className='header_search'>
