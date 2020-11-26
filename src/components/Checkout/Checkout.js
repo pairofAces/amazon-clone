@@ -3,7 +3,7 @@ import './Checkout.css';
 import Subtotal from './Subtotal';
 import { useStateValue } from '../Util/StateProvider';
 import CheckoutProduct from './CheckoutProduct';
-import NavBar from '/Users/karanchauhan/Development/Personal Projects/Amazon-Clone/emporium/src/components/Header/Navbar.js';
+// import NavBar from '/Users/karanchauhan/Development/Personal Projects/Amazon-Clone/emporium/src/components/Header/Navbar.js';
 
 
 export default function Checkout() {
