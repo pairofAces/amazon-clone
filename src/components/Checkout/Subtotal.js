@@ -13,7 +13,8 @@ function Subtotal() {
                             <strong>0</strong>
                         </p>
                         <small className="subtotal_gift">
-                            <input className="checkbox"/>This order contains a gift
+                            <input type="checkbox"/>
+                            This order contains a gift
                         </small>
                     </>
                 )}
@@ -24,6 +25,8 @@ function Subtotal() {
                 thousandSeperator={true}
                 prefix={"$"}
             />
+
+            <button>Proceed to Checkout</button>
         </div>
     )
 }
