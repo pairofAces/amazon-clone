@@ -1,7 +1,7 @@
 import React from 'react'
 import './Login.css';
 import logo from './Emporium-white.png';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Login() {
     return (
