@@ -3,7 +3,7 @@ export const initialState = {
     user: null
   };
   
-  // Selector
+  // This will be the Selector
   export const getBasketTotal = (basket) => 
     basket?.reduce((amount, item) => item.price + amount, 0);
   
