@@ -15,12 +15,18 @@ function Login() {
         e.preventDefault();
 
         //include firebase authentication code here
+        auth.signInWithEmailAndPassword(email, password)
+        .then(auth => {
+            history.push('/');
+        })
+        .catch(error => alert(error.message))
     }
 
     //create the register function
     const register = (e) => {
         e.preventDefault();
 
+        //include firebase registration code here
         auth.createUserWithEmailAndPassword(email, password)
         .then((auth) => {
             // test if a user is successfully created
@@ -30,7 +36,6 @@ function Login() {
             }
         })
         .catch(error => alert(error.message))
-        //include firebase registration code here
     }
 
     return (
