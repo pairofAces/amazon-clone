@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import './Login.css';
 import logo from './Emporium-white.png';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../Firebase/firebase';
 
 
 function Login() {
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -23,7 +24,10 @@ function Login() {
         auth.createUserWithEmailAndPassword(email, password)
         .then((auth) => {
             // test if a user is successfully created
-            console.log(auth);
+            console.log(auth); //IT WORKS!!!!
+            if (auth) {
+                history.push('/');
+            }
         })
         .catch(error => alert(error.message))
         //include firebase registration code here
