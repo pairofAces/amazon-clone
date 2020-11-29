@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './Login.css';
 import logo from './Emporium-white.png';
 import { Link } from 'react-router-dom';
+import { auth } from '../Firebase/firebase';
+
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -18,6 +20,12 @@ function Login() {
     const register = (e) => {
         e.preventDefault();
 
+        auth.createUserWithEmailAndPassword(email, password)
+        .then((auth) => {
+            // test if a user is successfully created
+            console.log(auth);
+        })
+        .catch(error => alert(error.message))
         //include firebase registration code here
     }
 
