@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Login.css';
 import logo from './Emporium-white.png';
 import { Link } from 'react-router-dom';
 
 function Login() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    //create the sign-in function
+    const signIn = (e) => {
+        e.preventDefault();
+
+        //include firebase authentication code here
+    }
+
+    //create the register function
+    const register = (e) => {
+        e.preventDefault();
+
+        //include firebase registration code here
+    }
+
     return (
         <div className="login">
             <Link to="/">
@@ -19,12 +36,12 @@ function Login() {
                 <h1>Sign-In</h1>
                 <form>
                     <h5>E-mail</h5>
-                    <input type="text"/>
+                    <input type="text" value={email} onChange={e => setEmail(e.target.value)}/>
 
                     <h5>Password</h5>
-                    <input type="password"/>
+                    <input type="password" value={password} onChange={e => setPassword(e.target.value)}/>
 
-                    <button className="login_signInButton">Sign In</button>
+                    <button type="submit" onClick={signIn} className="login_signInButton">Sign In</button>
                 </form>
 
                 <p>
@@ -33,7 +50,7 @@ function Login() {
                     Notice and our Interest-Based Ads.
                 </p>
 
-                <button className="login_registerButton">Create your Emporium Account</button>
+                <button onClick={register} className="login_registerButton">Create your Emporium Account</button>
             </div>
         </div>
     )
