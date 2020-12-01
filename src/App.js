@@ -43,12 +43,16 @@ function App() {
 
           <Route path="/login">
             <Login/>
-            {/* <h1>Login Page</h1> */}
           </Route>
 
           <Route path='/checkout'>
             <NavBar />
             <Checkout />
+          </Route>
+
+          <Route path='/payment'>
+            <NavBar/>
+            <h1>This is the payment page</h1>
           </Route>
 
           <Route path='/'>
