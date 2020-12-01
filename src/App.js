@@ -8,6 +8,7 @@ import Checkout from './components/Checkout/Checkout';
 import Login from './components/Login/Login';
 import { auth } from './components/Firebase/firebase.js';
 import { useStateValue } from './components/Util/StateProvider';
+import Payment from './components/Payment/Payment.js'
 
 
 function App() {
@@ -52,7 +53,7 @@ function App() {
 
           <Route path='/payment'>
             <NavBar/>
-            <h1>This is the payment page</h1>
+            <Payment/>
           </Route>
 
           <Route path='/'>
