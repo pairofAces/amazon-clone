@@ -7,41 +7,38 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from '../Util/reducer';
 import axios from '../Axios';
+import { db } from '../Firebase/firebase';
 
 function Payment() {
 
-    const [{ basket, user }, dispatch] = useStateValue();
+    const[{ basket, user }, dispatch] = useStateValue();
     const history = useHistory();
-
     const stripe = useStripe();
     const elements = useElements();
 
-    const [succeeded, setSucceeded] = useState(false);
-    const [processing, setProcessing] = useState("");
     const [error, setError] = useState(null);
+    const [succeeded, setSucceeded] = useState(false);
+    const [processing, setProcessing] = useState('');
     const [disabled, setDisabled] = useState(true);
-    const [clientSecret, setClientSecret] = useStateValue(true);
+    const [clientSecret, setClientSecret] = useState(true);
 
     useEffect(() => {
-        //this function will generate the stripe secret
-        //which allows to charge a customer
-       
         const getClientSecret = async () => {
             const response = await axios({
                 method: 'post',
                 url: `/payments/create?total=${getBasketTotal(basket) * 100}`
             });
             setClientSecret(response.data.clientSecret)
-        } 
+        }
 
         getClientSecret();
     }, [basket])
 
     console.log('The SECRET IS >>>', clientSecret)
 
-    const submitHandler = async (e) => {
+    const submitHandler = async (event) => {
         //stripe configuration code will go here
-        e.preventDefault();
+        event.preventDefault();
         setProcessing(true);
 
         const payload = await stripe.confirmCardPayment(clientSecret, {
@@ -49,13 +46,20 @@ function Payment() {
                 card: elements.getElement(CardElement)
             }
         }).then(({ paymentIntent }) => {
-            // this is the payment confirmation
-            // if everything is good then:
+            db.collection('users').doc(user?.uid).collection('orders').doc(paymentIntent.id).set({
+                basket: basket,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created
+            })
 
             setSucceeded(true);
-            setError(null);
-            setProcessing(false);
+            setError(null)
+            setProcessing(false)
 
+            dispatch({
+                type: 'EMPTY_BASKET'
+            })
+            
             history.replace('/orders')
         })
     }
@@ -145,4 +149,4 @@ function Payment() {
     )
 }
 
-export default Payment
+export default Payment;
