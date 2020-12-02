@@ -37,6 +37,8 @@ function Payment() {
         getClientSecret();
     }, [basket])
 
+    console.log('The SECRET IS >>>', clientSecret)
+
     const submitHandler = async (e) => {
         //stripe configuration code will go here
         e.preventDefault();
