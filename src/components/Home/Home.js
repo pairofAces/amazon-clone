@@ -1,16 +1,30 @@
 import React from 'react';
 import "./Home.css";
 import Product from '../Products/Product';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 export default function Home() {
     return(
         <div className="home">
             <div className="home_container">
-            <img
-            className="home_image"
-            src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
-            alt=""
-            />
+                <Carousel infiniteLoop autoPlay showThumbs={false}>
+                    <img
+                    className="home_image"
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/prime/HOL20_P1_GWH5/HOL_V2/GW/V2/primeholiday_gw_dt_tallhero_3000x1200_holiday_engaged_en_v2._CB403512586_.jpg"
+                    alt=""
+                    />
+                    <img
+                    className="home_image"
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/img20/events/Q4/Holiday/CyberMonday/TrafficDrivers/Q4_2020_CyberMonday_DO_TrafficDrivers_Desktop_Hero_v2-B_3000x1200._CB416740470_.jpg"
+                    alt=""
+                    />
+                    <img
+                    className="home_image"
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/sm/amped/roblox/RobloxDrop4/Desktop_Tablet-Hero_EN_2x._CB416332768_.jpg"
+                    alt=""
+                    />
+                </Carousel>
 
             <div className="home_row">
             <Product
