@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Payment.css';
 import { useStateValue } from '../Util/StateProvider';
 import CheckoutProduct from '../Checkout/CheckoutProduct';
@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from '../Util/reducer';
+import axios from '../Axios';
 
 function Payment() {
 
@@ -17,10 +18,29 @@ function Payment() {
     const [processing, setProcessing] = useState("");
     const [error, setError] = useState(null);
     const [disabled, setDisabled] = useState(true);
+    const [clientSecret, setClientSecret] = useStateValue(true);
 
-    const submitHandler = (e) => {
+    useEffect(() => {
+        //this function will generate the stripe secret
+        //which allows to charge a customer
+       
+        const getClientSecret = async () => {
+            const response = await axios({
+                method: 'post',
+                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+            });
+            setClientSecret(response.data.clientSecret)
+        } 
+
+        getClientSecret();
+    }, [basket])
+
+    const submitHandler = async (e) => {
         //stripe configuration code will go here
+        e.preventDefault();
+        setProcessing(true);
 
+        // const payload = await stripe
     }
 
     const changeHandler = (e) => {
