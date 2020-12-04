@@ -48,11 +48,12 @@ Users can browse through the shop or sign up/in through the links in the navigat
 
 After signing up/in, users can go back to the homepage and add items to their cart.  
 
-Users can then navigate to the cart located on the top right. 
+Users can then navigate to the cart by clicking the bag-icon, located on the top right. 
 
 After making sure all the selected items are in the cart, users can proceed to checkout.  
 
 For Payment purposes, users can use the following as a test credit card:
+
  * Card Number: 4242 4242 4242 4242
  * Date: 04/24
  * CVC: 242
@@ -61,6 +62,8 @@ For Payment purposes, users can use the following as a test credit card:
  After filling in your information, users can press 'buy now' to be redirected to the Orders page.
 
  Enjoy the App :)
+
+ Thank you for your time!
 </p>
 
 # Sources
