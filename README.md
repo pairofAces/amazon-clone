@@ -33,8 +33,8 @@ This app was engineered to gain knowledge on using firebase in full stack applic
 </ul>
 
 # Demo
-<!-- <a href="https://bazaar-596f2.web.app/"> Check it out yourself by clicking here!</a>  
-![Bazaar](https://media.giphy.com/media/17BF82waniz4ndE1UW/giphy.gif) -->
+<a href="https://clone-d0660.web.app/" target="_blank"> Check it out yourself by clicking here!</a>  
+![Emporium](https://media.giphy.com/media/X2eKQ9hrAzjRRijHNd/giphy.gif)
 
 # User Guide 
 <p>
