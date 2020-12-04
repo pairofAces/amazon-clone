@@ -1,4 +1,4 @@
-# Emporium
+# Emporium - Amazon Clone
 <p>
 A web application engineered and designed to be an Amazon clone. Created with React and Google Firebase.  
 
@@ -42,7 +42,9 @@ Users can either use this application on their own accord and follow their own d
 <br>
 <br>
 
-Users can browse through the shop as is or sign up/in through the links in the navigation bar above.   
+Users can browse through the shop or sign up/in through the links in the navigation bar above.  
+
+- Users can create an account by entering their credentials in the input boxes, then clicking the "Create your Emporium account" button.
 
 After signing up/in, users can go back to the homepage and add items to their cart.  
 
