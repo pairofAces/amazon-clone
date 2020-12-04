@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Emporium
+<p>
+A web application engineered and designed to be an Amazon clone. Created with React and Google Firebase.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Functions:  
+* Full e-commerce functionality.
+* Backend database with Firebase.
+* Add + remove items from cart.
+* User authentication and signup. 
+* Checkout page and payment processing with Stripe.
+* Orders page that keeps track of previous payments.
+ 
+This app was engineered to gain knowledge on using firebase in full stack applications and was a fun project to design overall. 
+</p>
 
-## Available Scripts
+# I learned the following:
+<ul>
+    <li>
+    Created user authentication and payment processing.
+    </li>
+    <li>
+    Generated a backend database using Google Firebase.
+    </li>
+    <li>
+    Created cart functionality in which users can add/remove items.
+    </li>
+    <li>
+    Deploying and hosting with Google Firebase. 
+    </li>
+    <li>
+    Styled and designed web layout with CSS.
+    </li>
+</ul>
 
-In the project directory, you can run:
+# Demo
+<!-- <a href="https://bazaar-596f2.web.app/"> Check it out yourself by clicking here!</a>  
+![Bazaar](https://media.giphy.com/media/17BF82waniz4ndE1UW/giphy.gif) -->
 
-### `yarn start`
+# User Guide 
+<p>
+Users can either use this application on their own accord and follow their own decisions or use this comprehensive <strong>guide</strong>:
+<br>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Users can browse through the shop as is or sign up/in through the links in the navigation bar above.   
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+After signing up/in, users can go back to the homepage and add items to their cart.  
 
-### `yarn test`
+Users can then navigate to the cart located on the top right. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After making sure all the selected items are in the cart, users can proceed to checkout.  
 
-### `yarn build`
+For Payment purposes, users can use the following as a test credit card:
+ * Card Number: 4242 4242 4242 4242
+ * Date: 04/24
+ * CVC: 242
+ * Zip Code: 42424
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ After filling in your information, users can press 'buy now' to be redirected to the Orders page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ Enjoy the App :)
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Sources
+<a href="https://reactjs.org/docs/getting-started.html"> React documentation <a>  
+<a href='https://firebase.google.com/docs/'>Google Firebase documentation </a>  
