@@ -33,7 +33,7 @@ export default function Navbar(){
 
 
             <div className='header_nav'>
-                <Link to={!user && '/login'}>
+                <Link style={{textDecoration: "None"}} to={!user && '/login'}>
                     <div onClick={authHandler} className='header_option'>
                         <span className='header_optionLineOne'>
                             Hello {!user ? 'Guest' : user.email}
@@ -44,7 +44,7 @@ export default function Navbar(){
                     </div>
                 </Link>
 
-                <Link to="/orders"> 
+                <Link style={{textDecoration: "None"}} to="/orders"> 
                     <div className='header_option'>
                         <span className='header_optionLineOne'>
                             Returns
